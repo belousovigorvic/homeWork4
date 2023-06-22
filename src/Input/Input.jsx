@@ -5,10 +5,12 @@ const Input = () => {
     const focusInput = () => {
         ref.current.focus()
     }
+    const buttonProps = {onClick:focusInput}
+    
     return (
         <div className='wrapper'>
             <input ref={ref} type="text"/>
-            <button onClick={focusInput}>Focus</button>
+            <button {...buttonProps}>Focus</button>
         </div>
     )
 }
